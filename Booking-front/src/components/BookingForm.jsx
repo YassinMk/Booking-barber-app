@@ -30,7 +30,7 @@ function BookingForm() {
     setSuccess(false); // Reset success state
     try {
       const response = await fetch(
-        "http://localhost:8080/api/appointments/book",
+        "https://diligent-perfection-production.up.railway.app/api/appointments/book",
         {
           method: "POST",
           headers: {
@@ -74,7 +74,7 @@ function BookingForm() {
     const fetchAvailableTimes = async () => {
       try {
         const formattedDate = date.toISOString().split("T")[0]; // Format the date as YYYY-MM-DD
-        const response = await fetch(`http://localhost:8080/api/appointments/available-times/${formattedDate}`);
+        const response = await fetch(`https://diligent-perfection-production.up.railway.app/api/appointments/available-times/${formattedDate}`);
         
         if (response.ok) {
           const times = await response.json(); // Assuming the API returns an array of times

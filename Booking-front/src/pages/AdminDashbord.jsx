@@ -69,7 +69,7 @@ import {
         const authToken = localStorage.getItem("authToken"); // Retrieve the token
         if (!authToken) throw new Error("No credentials found. Please log in.");
     
-        const response = await fetch(`http://localhost:8080/api/appointments/validate/${id}`, {
+        const response = await fetch(`https://diligent-perfection-production.up.railway.app/api/appointments/validate/${id}`, {
           method: "PUT",
           headers: {
             Authorization: `Basic ${authToken}`, // Send Basic Auth header
@@ -98,7 +98,7 @@ import {
         const authToken = localStorage.getItem("authToken"); // Retrieve the token
         if (!authToken) throw new Error("No credentials found. Please log in.");
     
-        const response = await fetch(`http://localhost:8080/api/appointments/cancel/${id}`, {
+        const response = await fetch(`https://diligent-perfection-production.up.railway.app/api/appointments/cancel/${id}`, {
           method: "PUT",
           headers: {
             Authorization: `Basic ${authToken}`, // Send Basic Auth header
